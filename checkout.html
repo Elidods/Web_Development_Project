@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Checkout — Marrow &amp; Ember</title>
+  <meta name="description" content="Complete your order from Marrow and Ember." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Work+Sans:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="wrap site-header__bar">
+      <a class="logo" href="index.html">Marrow <span>&amp; Ember</span></a>
+
+      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="primary-navigation">
+        <span class="nav-toggle__bar"></span>
+        <span class="nav-toggle__bar"></span>
+        <span class="nav-toggle__bar"></span>
+      </button>
+
+      <nav class="site-nav" aria-label="Primary">
+        <ul class="site-nav__list" id="primary-navigation">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="shop.html">Shop</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="cart.html">Cart<span class="cart-count" data-empty="true">0</span></a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="section contact-grid" aria-labelledby="checkout-heading" style="border-top:none; display:grid; gap:var(--space-lg);">
+      <div class="wrap contact-grid">
+
+        <div>
+          <p class="eyebrow">Almost there</p>
+          <h1 id="checkout-heading">Checkout</h1>
+          <p>This is a teaching project, so there is no real payment step,
+             the form below simulates placing an order and clears your cart.</p>
+
+          <!-- No backend exists for this project, so setUpCheckoutPage()
+               in js/script.js validates the fields itself and shows the
+               confirmation panel below rather than submitting anywhere -->
+          <form id="checkout-form" novalidate>
+            <div class="field">
+              <label for="fullName">Full name</label>
+              <input type="text" id="fullName" name="fullName" autocomplete="name" />
+              <span class="field__error" data-for="fullName"></span>
+            </div>
+
+            <div class="field">
+              <label for="address">Delivery address</label>
+              <textarea id="address" name="address" autocomplete="street-address"></textarea>
+              <span class="field__error" data-for="address"></span>
+            </div>
+
+            <button type="submit" class="button">Place order</button>
+          </form>
+
+          <div class="order-confirmation" id="order-confirmation" role="status">
+            Order placed. A confirmation email would normally follow, this
+            project stops here since there is no real payment processor
+            behind it.
+          </div>
+        </div>
+
+        <div>
+          <h2>Order summary</h2>
+          <div id="order-summary-list">
+            <!-- populated by setUpCheckoutPage() in js/script.js -->
+          </div>
+          <div class="order-summary__line" style="border-bottom:none; font-weight:600;">
+            <span>Total</span>
+            <span id="order-summary-total">&pound;0.00</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap site-footer__bar">
+      <span class="site-footer__brand"><img src="images/bean-icon.png" alt="" />&copy; 2026 Marrow &amp; Ember Roastery</span>
+      <nav aria-label="Footer">
+        <a href="index.html">Home</a> &nbsp;·&nbsp;
+        <a href="menu.html">Menu</a> &nbsp;·&nbsp;
+        <a href="shop.html">Shop</a> &nbsp;·&nbsp;
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Menu — Marrow &amp; Ember</title>
+  <meta name="description" content="Browse the coffee, cold brew, and pastry menu at Marrow and Ember roastery, filter by category." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Work+Sans:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="wrap site-header__bar">
+      <a class="logo" href="index.html">Marrow <span>&amp; Ember</span></a>
+
+      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="primary-navigation">
+        <span class="nav-toggle__bar"></span>
+        <span class="nav-toggle__bar"></span>
+        <span class="nav-toggle__bar"></span>
+      </button>
+
+      <nav class="site-nav" aria-label="Primary">
+        <ul class="site-nav__list" id="primary-navigation">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="menu.html" aria-current="page">Menu</a></li>
+          <li><a href="shop.html">Shop</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="cart.html">Cart<span class="cart-count" data-empty="true">0</span></a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="section" aria-labelledby="menu-heading" style="border-top:none;">
+      <div class="wrap">
+        <p class="eyebrow">What's pouring this week</p>
+        <h1 id="menu-heading">The menu</h1>
+        <p>Everything below is made to order. Prices are for a takeaway cup,
+           add fifty pence for oat or almond milk.</p>
+
+        <!-- Filter buttons. data-filter must match the data-category value
+             on each .menu-item below. "all" is handled specially in
+             setUpMenuFilters() in js/script.js -->
+        <div class="menu-filters" role="group" aria-label="Filter the menu by category">
+          <button class="filter-btn is-active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="coffee">Coffee</button>
+          <button class="filter-btn" data-filter="cold">Cold brew</button>
+          <button class="filter-btn" data-filter="pastry">Pastries</button>
+        </div>
+
+        <div class="menu-grid">
+
+          <article class="menu-item" data-category="coffee">
+            <div class="menu-item__top">
+              <h3 class="menu-item__name">House filter</h3>
+              <span class="menu-item__price">&pound;3.20</span>
+            </div>
+            <p class="menu-item__desc">Our rotating single origin, brewed by the cup on a slow pour.</p>
+            <span class="menu-item__tag">Rotating origin</span>
+          </article>
+
+          <article class="menu-item" data-category="coffee">
+            <div class="menu-item__top">
+              <h3 class="menu-item__name">Flat white</h3>
+              <span class="menu-item__price">&pound;3.60</span>
+            </div>
+            <p class="menu-item__desc">Double ristretto shot, steamed milk poured thin.</p>
+            <span class="menu-item__tag">House blend</span>
+          </article>
+
+          <article class="menu-item" data-category="coffee">
+            <div class="menu-item__top">
+              <h3 class="menu-item__name">Espresso</h3>
+              <span class="menu-item__price">&pound;2.60</span>
+            </div>
+            <p class="menu-item__desc">Twenty five second pull, tastes like dark cherry and toasted grain.</p>
+            <span class="menu-item__tag">House blend</span>
+          </article>
+
+          <article class="menu-item" data-category="cold">
+            <div class="menu-item__top">
+              <h3 class="menu-item__name">Cold brew</h3>
+              <span class="menu-item__price">&pound;3.80</span>
+            </div>
+            <p class="menu-item__desc">Steeped for eighteen hours, served over a single large cube.</p>
+            <span class="menu-item__tag">Steeped daily</span>
+          </article>
+
+          <article class="menu-item" data-category="cold">
+            <div class="menu-item__top">
+              <h3 class="menu-item__name">Iced oat latte</h3>
+              <span class="menu-item__price">&pound;4.10</span>
+            </div>
+            <p class="menu-item__desc">Double shot over oat milk and ice, no syrup needed.</p>
+            <span class="menu-item__tag">Dairy free</span>
+          </article>
+
+          <article class="menu-item" data-category="pastry">
+            <div class="menu-item__top">
+              <h3 class="menu-item__name">Brown butter cookie</h3>
+              <span class="menu-item__price">&pound;2.80</span>
+            </div>
+            <p class="menu-item__desc">Baked next door each morning, still warm by ten.</p>
+            <span class="menu-item__tag">Baked daily</span>
+          </article>
+
+          <article class="menu-item" data-category="pastry">
+            <div class="menu-item__top">
+              <h3 class="menu-item__name">Almond croissant</h3>
+              <span class="menu-item__price">&pound;3.40</span>
+            </div>
+            <p class="menu-item__desc">Laminated dough, almond cream, a dusting of flaked almonds.</p>
+            <span class="menu-item__tag">Baked daily</span>
+          </article>
+
+        </div>
+
+        <!-- Shown only if a filter has zero matching results, kept hidden
+             the rest of the time by display:none in style.css -->
+        <p class="menu-empty">Nothing under this category yet, check back soon.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap site-footer__bar">
+      <span class="site-footer__brand"><img src="images/bean-icon.png" alt="" />&copy; 2026 Marrow &amp; Ember Roastery</span>
+      <nav aria-label="Footer">
+        <a href="index.html">Home</a> &nbsp;·&nbsp;
+        <a href="menu.html">Menu</a> &nbsp;·&nbsp;
+        <a href="shop.html">Shop</a> &nbsp;·&nbsp;
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

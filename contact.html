@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact — Marrow &amp; Ember</title>
+  <meta name="description" content="Get in touch with Marrow and Ember roastery, see opening hours, and find our address." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Work+Sans:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="wrap site-header__bar">
+      <a class="logo" href="index.html">Marrow <span>&amp; Ember</span></a>
+
+      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="primary-navigation">
+        <span class="nav-toggle__bar"></span>
+        <span class="nav-toggle__bar"></span>
+        <span class="nav-toggle__bar"></span>
+      </button>
+
+      <nav class="site-nav" aria-label="Primary">
+        <ul class="site-nav__list" id="primary-navigation">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="shop.html">Shop</a></li>
+          <li><a href="contact.html" aria-current="page">Contact</a></li>
+          <li><a href="cart.html">Cart<span class="cart-count" data-empty="true">0</span></a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="section" aria-labelledby="contact-heading" style="border-top:none;">
+      <div class="wrap contact-grid">
+
+        <div>
+          <p class="eyebrow">Get in touch</p>
+          <h1 id="contact-heading">Come by, or drop us a line</h1>
+          <p>Wholesale enquiries, private events, or just a question about a
+             bag you bought last week, the form below reaches the same inbox
+             the roaster checks each morning.</p>
+
+          <!-- The form has no server behind it, so validation and the
+               success message are both handled in JavaScript, see
+               setUpContactForm() in js/script.js -->
+          <form id="contact-form" novalidate>
+            <div class="field">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" autocomplete="name" />
+              <span class="field__error" data-for="name"></span>
+            </div>
+
+            <div class="field">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" autocomplete="email" />
+              <span class="field__error" data-for="email"></span>
+            </div>
+
+            <div class="field">
+              <label for="message">Message</label>
+              <textarea id="message" name="message"></textarea>
+              <span class="field__error" data-for="message"></span>
+            </div>
+
+            <button type="submit" class="button">Send message</button>
+
+            <p class="form-status" role="status"></p>
+          </form>
+        </div>
+
+        <div>
+          <h2>Visit</h2>
+          <p>14 Foundry Lane<br />Riverstone, RS3 2AL</p>
+
+          <img src="images/map-illustration.svg" alt="Simplified map showing Marrow and Ember on Foundry Lane, near the river and the High Street" width="480" height="320" style="border-radius: var(--radius); border: 1px solid var(--line); margin-bottom: var(--space-md);" />
+
+          <table class="hours-table">
+            <caption class="eyebrow" style="text-align:left;">Opening hours</caption>
+            <thead>
+              <tr>
+                <th scope="col">Day</th>
+                <th scope="col">Hours</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>Monday</td><td>Closed, roasting day</td></tr>
+              <tr><td>Tuesday to Friday</td><td>8:00 to 16:00</td></tr>
+              <tr><td>Saturday</td><td>9:00 to 15:00</td></tr>
+              <tr><td>Sunday</td><td>Closed</td></tr>
+            </tbody>
+          </table>
+
+          <h2 style="margin-top: var(--space-md);">Wholesale</h2>
+          <p>We supply bags and pour over kits to a handful of cafes within an
+             hour's drive. Get in touch through the form for a sample box.</p>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap site-footer__bar">
+      <span class="site-footer__brand"><img src="images/bean-icon.png" alt="" />&copy; 2026 Marrow &amp; Ember Roastery</span>
+      <nav aria-label="Footer">
+        <a href="index.html">Home</a> &nbsp;·&nbsp;
+        <a href="menu.html">Menu</a> &nbsp;·&nbsp;
+        <a href="shop.html">Shop</a> &nbsp;·&nbsp;
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

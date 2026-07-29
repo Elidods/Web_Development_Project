@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cart — Marrow &amp; Ember</title>
+  <meta name="description" content="Review your basket before checking out at Marrow and Ember." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Work+Sans:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="wrap site-header__bar">
+      <a class="logo" href="index.html">Marrow <span>&amp; Ember</span></a>
+
+      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="primary-navigation">
+        <span class="nav-toggle__bar"></span>
+        <span class="nav-toggle__bar"></span>
+        <span class="nav-toggle__bar"></span>
+      </button>
+
+      <nav class="site-nav" aria-label="Primary">
+        <ul class="site-nav__list" id="primary-navigation">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="shop.html">Shop</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="cart.html" aria-current="page">Cart<span class="cart-count" data-empty="true">0</span></a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="section" aria-labelledby="cart-heading" style="border-top:none;">
+      <div class="wrap">
+        <p class="eyebrow">Your basket</p>
+        <h1 id="cart-heading">Cart</h1>
+
+        <!-- Populated entirely by setUpCartPage() in js/script.js, reading
+             the cart out of localStorage, there is no content here on
+             page load beyond the empty state message below. -->
+        <p class="cart-empty">Your cart is empty. <a href="shop.html">Browse the shop</a>.</p>
+
+        <table class="cart-table">
+          <thead>
+            <tr>
+              <th scope="col">Item</th>
+              <th scope="col">Price</th>
+              <th scope="col">Quantity</th>
+              <th scope="col">Line total</th>
+              <th scope="col"><span class="visually-hidden">Remove</span></th>
+            </tr>
+          </thead>
+          <tbody id="cart-table-body">
+            <!-- rows inserted here by script.js -->
+          </tbody>
+        </table>
+
+        <div class="cart-summary">
+          <div class="cart-summary__row cart-summary__row--total">
+            <span>Subtotal</span>
+            <span id="cart-subtotal">&pound;0.00</span>
+          </div>
+        </div>
+
+        <p style="text-align: right; margin-top: var(--space-sm);">
+          <a class="button" href="checkout.html" id="checkout-link">Proceed to checkout</a>
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap site-footer__bar">
+      <span class="site-footer__brand"><img src="images/bean-icon.png" alt="" />&copy; 2026 Marrow &amp; Ember Roastery</span>
+      <nav aria-label="Footer">
+        <a href="index.html">Home</a> &nbsp;·&nbsp;
+        <a href="menu.html">Menu</a> &nbsp;·&nbsp;
+        <a href="shop.html">Shop</a> &nbsp;·&nbsp;
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

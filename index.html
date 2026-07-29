@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Marrow &amp; Ember — Small Batch Coffee Roastery</title>
+  <meta name="description" content="Marrow and Ember is a small batch coffee roastery. See our roasting process, browse the menu, and find our opening hours." />
+
+  <!-- Google Fonts: a characterful display serif, a plain body sans, and a
+       mono face used for labels, prices and captions throughout the site -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Work+Sans:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ============================= HEADER ============================= -->
+  <header class="site-header">
+    <div class="wrap site-header__bar">
+      <a class="logo" href="index.html">Marrow <span>&amp; Ember</span></a>
+
+      <!-- Hamburger button, only shown below the tablet breakpoint. The
+           JavaScript in js/script.js toggles the nav list and this
+           aria-expanded value together. -->
+      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="primary-navigation">
+        <span class="nav-toggle__bar"></span>
+        <span class="nav-toggle__bar"></span>
+        <span class="nav-toggle__bar"></span>
+      </button>
+
+      <nav class="site-nav" aria-label="Primary">
+        <ul class="site-nav__list" id="primary-navigation">
+          <li><a href="index.html" aria-current="page">Home</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="shop.html">Shop</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="cart.html">Cart<span class="cart-count" data-empty="true">0</span></a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ============================= HERO ============================= -->
+    <section class="hero">
+      <div class="wrap hero__grid">
+        <div class="hero__copy">
+          <p class="eyebrow">Small batch, since 2019</p>
+          <h1>We roast in twelve kilo batches, and taste every single one.</h1>
+          <p>Marrow &amp; Ember is a one room roastery on the edge of town. Green
+             beans arrive by the sack, and leave as something you would drive
+             back for. No blends made to hit a price point, only roasts made
+             to taste right.</p>
+          <div class="hero__actions">
+            <a class="button" href="menu.html">See the menu</a>
+            <a class="button button--ghost" href="contact.html">Visit us</a>
+          </div>
+        </div>
+
+        <!-- Signature element: a hand drawn roast curve, the actual
+             temperature profile we roast our house filter blend to. The
+             line draws itself in once it scrolls into view, see
+             .roast-curve__line in style.css and setUpRoastCurveReveal()
+             in js/script.js -->
+        <figure class="roast-curve">
+          <svg viewBox="0 0 600 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="curveTitle">
+            <title id="curveTitle">Roast curve for the house filter blend, temperature rising over twelve minutes</title>
+
+            <!-- axes -->
+            <line x1="40" y1="20" x2="40" y2="260" stroke="#ded4c2" stroke-width="2" />
+            <line x1="40" y1="260" x2="580" y2="260" stroke="#ded4c2" stroke-width="2" />
+
+            <!-- the curve itself -->
+            <path class="roast-curve__line" d="M40,255 C110,248 150,210 200,175 C250,140 290,150 330,110 C370,70 410,80 450,50 C490,20 520,35 560,15"
+                  fill="none" stroke="#b54e2c" stroke-width="4" stroke-linecap="round" />
+
+            <!-- first crack marker, the point where the beans audibly pop -->
+            <circle cx="330" cy="110" r="5" fill="#211d1a" />
+            <text x="340" y="105" font-family="Space Mono, monospace" font-size="12" fill="#211d1a">first crack</text>
+
+            <text x="40" y="278" font-family="Space Mono, monospace" font-size="11" fill="#7a6f62">0 min</text>
+            <text x="540" y="278" font-family="Space Mono, monospace" font-size="11" fill="#7a6f62">12 min</text>
+            <text x="10" y="24" font-family="Space Mono, monospace" font-size="11" fill="#7a6f62">220°C</text>
+            <text x="18" y="264" font-family="Space Mono, monospace" font-size="11" fill="#7a6f62">160°C</text>
+          </svg>
+          <figcaption>The house filter blend, roast profile, twelve minutes drum to cooling tray.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ============================= STORY ============================= -->
+    <section class="section" aria-labelledby="story-heading">
+      <div class="wrap story__grid">
+        <div>
+          <p class="eyebrow">How it works</p>
+          <h2 id="story-heading">One drum, one roaster, one decision at a time</h2>
+          <p>Every batch is roasted by hand on a refurbished drum machine.
+             There is no automated profile to fall back on, so the roaster
+             listens for the crack, watches the colour, and pulls the batch
+             the moment it tastes the way it should.</p>
+          <div class="stat-row">
+            <div class="stat">
+              <strong>12kg</strong>
+              <span>per batch</span>
+            </div>
+            <div class="stat">
+              <strong>48hr</strong>
+              <span>rest before grinding</span>
+            </div>
+            <div class="stat">
+              <strong>6</strong>
+              <span>origins in rotation</span>
+            </div>
+            <div class="stat">
+              <strong>3</strong>
+              <span>days a week we roast</span>
+            </div>
+          </div>
+        </div>
+
+        <img src="images/roastery-illustration.svg" alt="Line illustration of the drum roaster, showing beans tumbling behind the roasting window with steam rising from the chimney" width="480" height="420" />
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============================= FOOTER ============================= -->
+  <footer class="site-footer">
+    <div class="wrap site-footer__bar">
+      <span class="site-footer__brand"><img src="images/bean-icon.png" alt="" />&copy; 2026 Marrow &amp; Ember Roastery</span>
+      <nav aria-label="Footer">
+        <a href="index.html">Home</a> &nbsp;·&nbsp;
+        <a href="menu.html">Menu</a> &nbsp;·&nbsp;
+        <a href="shop.html">Shop</a> &nbsp;·&nbsp;
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
