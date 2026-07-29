@@ -1,0 +1,23 @@
+<!-- Line illustration of a ceramic pour over dripper sitting on a cup,
+     used for the brewing kit and gift box cards -->
+<svg viewBox="0 0 120 140" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="kitTitle">
+  <title id="kitTitle">Illustration of a pour over dripper on a cup</title>
+
+  <!-- dripper cone -->
+  <path d="M35 40 L85 40 L68 78 L52 78 Z" fill="none" stroke="#211d1a" stroke-width="4" />
+  <!-- dripper rim -->
+  <ellipse cx="60" cy="40" rx="25" ry="6" fill="#f5efe4" stroke="#211d1a" stroke-width="4" />
+
+  <!-- pour stream -->
+  <path d="M60 22 C 58 28, 62 32, 60 40" stroke="#b54e2c" stroke-width="3" fill="none" stroke-linecap="round" />
+
+  <!-- cup -->
+  <path d="M40 90 L80 90 L75 122 Q74 128 68 128 L52 128 Q46 128 45 122 Z"
+        fill="#f5efe4" stroke="#211d1a" stroke-width="4" />
+  <!-- cup handle -->
+  <path d="M80 98 Q94 98 94 108 Q94 118 80 116" fill="none" stroke="#211d1a" stroke-width="4" />
+
+  <!-- steam -->
+  <path d="M52 82 C 48 76, 54 72, 50 64" stroke="#6e7a4f" stroke-width="3" fill="none" stroke-linecap="round" opacity="0.7" />
+  <path d="M68 82 C 64 76, 70 72, 66 64" stroke="#6e7a4f" stroke-width="3" fill="none" stroke-linecap="round" opacity="0.5" />
+</svg>

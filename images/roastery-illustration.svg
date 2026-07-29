@@ -1,0 +1,35 @@
+<!-- Line illustration of a drum roaster, hand drawn in vector form for the
+     home page story section. Kept to two colours so it sits quietly next
+     to the photography style copy around it. -->
+<svg viewBox="0 0 480 420" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="roasterTitle">
+  <title id="roasterTitle">Line illustration of a small batch coffee roasting drum</title>
+
+  <!-- base and legs -->
+  <rect x="90" y="330" width="300" height="18" rx="4" fill="#211d1a" />
+  <rect x="120" y="348" width="16" height="40" fill="#211d1a" />
+  <rect x="344" y="348" width="16" height="40" fill="#211d1a" />
+
+  <!-- main body -->
+  <rect x="70" y="150" width="340" height="180" rx="14" fill="none" stroke="#211d1a" stroke-width="6" />
+
+  <!-- drum window -->
+  <circle cx="240" cy="240" r="72" fill="#f5efe4" stroke="#211d1a" stroke-width="6" />
+  <circle cx="240" cy="240" r="50" fill="none" stroke="#b54e2c" stroke-width="5" stroke-dasharray="10 8" />
+
+  <!-- beans inside the drum window -->
+  <ellipse cx="222" cy="228" rx="9" ry="6" fill="#b54e2c" transform="rotate(-20 222 228)" />
+  <ellipse cx="252" cy="238" rx="9" ry="6" fill="#8e3c20" transform="rotate(15 252 238)" />
+  <ellipse cx="236" cy="258" rx="9" ry="6" fill="#b54e2c" transform="rotate(-40 236 258)" />
+  <ellipse cx="264" cy="212" rx="9" ry="6" fill="#8e3c20" transform="rotate(30 264 212)" />
+
+  <!-- chimney and steam -->
+  <rect x="330" y="90" width="22" height="60" fill="none" stroke="#211d1a" stroke-width="6" />
+  <path d="M341 80 C 330 60, 352 50, 341 30" fill="none" stroke="#6e7a4f" stroke-width="5" stroke-linecap="round" />
+  <path d="M341 55 C 330 40, 352 30, 341 12" fill="none" stroke="#6e7a4f" stroke-width="5" stroke-linecap="round" opacity="0.6" />
+
+  <!-- control panel dials -->
+  <circle cx="108" cy="185" r="12" fill="none" stroke="#211d1a" stroke-width="4" />
+  <circle cx="148" cy="185" r="12" fill="none" stroke="#211d1a" stroke-width="4" />
+  <line x1="108" y1="185" x2="115" y2="176" stroke="#b54e2c" stroke-width="3" stroke-linecap="round" />
+  <line x1="148" y1="185" x2="153" y2="193" stroke="#b54e2c" stroke-width="3" stroke-linecap="round" />
+</svg>
